@@ -4,3 +4,9 @@
     background-size: cover;
     border-radius: 16px;
 }
+
+.btn-app {
+
+    background-color: #47C899;
+    border: none;
+}
