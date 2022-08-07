@@ -13,14 +13,11 @@ export class LoginComponent implements OnInit {
   constructor(private fb:FormBuilder) { }
 
  ngOnInit(): void {
-  
-  this.myForm = this.createMyForm();
+    this.myForm = this.createMyForm();
   }
 
 private createMyForm():FormGroup {
-
   return this.fb.group({
-
     usuario:['', [Validators.required]],
     password:['', Validators.required]
   });
@@ -36,7 +33,6 @@ public submitFormulario() {
     return;
   }
    console.log(this.myForm.value);
- 
 }
 
 public get f():any{
