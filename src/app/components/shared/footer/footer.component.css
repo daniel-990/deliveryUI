@@ -1,0 +1,11 @@
+footer {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 11px;
+    background-color: black;
+    color: white;
+}
+
+footer div:nth-child(1) svg{
+    width: 25px;
+}
