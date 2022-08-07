@@ -8,7 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CatalogoComponent } from './components/catalogo/catalogo.component';
 import { RouterModule, Routes } from '@angular/router';
-import { Page404Component } from './component/page404/page404.component';
+import { Page404Component } from './components/page404/page404.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';

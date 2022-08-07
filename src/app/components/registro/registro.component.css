@@ -1,0 +1,22 @@
+.contenedor-prpal-registro{
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+.btn-app {
+    background-color: #47C899;
+    border: none;
+}
+.imagen-delivery{
+    background-image: url("/assets/imagenes/fondo1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    border-radius: 20px;
+    border: 1px solid #f7f7f7;
+}
+.divider{
+    border: 1px solid #c5c5c5;
+    margin-bottom: 4rem;
+    width: 2rem;
+}
