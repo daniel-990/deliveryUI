@@ -9,3 +9,14 @@
     background-color: #47C899;
     border: none;
 }
+
+.alert{
+    color: red;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+}
+.color-link{
+    color: #393f81;
+}

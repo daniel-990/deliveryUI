@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { LoginComponent } from './components/login/login.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+//aqui se importan los paquetes de form
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CatalogoComponent } from './components/catalogo/catalogo.component';
 import { RouterModule, Routes } from '@angular/router';
 import { Page404Component } from './components/page404/page404.component';
@@ -35,8 +36,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     ReactiveFormsModule,
+    FormsModule,
     AppRoutingModule,
     RouterModule.forRoot(routes)
   ],

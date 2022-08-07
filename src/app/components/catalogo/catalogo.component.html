@@ -1,1 +1,20 @@
-<p>catalogo works!</p>
+<div class="container">
+    <h1 class="catalogo">catalogo</h1>
+    <div class="contenido-catalogo row">
+        <div *ngFor="let item of catalogo" class="card col" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{item.nombreproducto}}</h5>
+                <div class="divider"></div>
+                <p class="card-text">
+                    <strong>Precio</strong>{{item.precio}}
+                    <br>
+                    <strong>Ref restaurante</strong>{{item.idrestaurante}}
+                    <br>
+                    <strong>Ref producto</strong>{{item.idproducto}}
+                </p>
+                <a href="#" class="btn btn-primary">Solicitar pedido</a>
+            </div>
+        </div>
+    </div>
+</div>

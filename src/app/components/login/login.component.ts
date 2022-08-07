@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -8,35 +8,26 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  public myForm!:FormGroup;
+  constructor(){}
 
-  constructor(private fb:FormBuilder) { }
+  //parametro para mostrar el mensaje en el front
+  resultado!: string;
 
- ngOnInit(): void {
-    this.myForm = this.createMyForm();
-  }
-
-private createMyForm():FormGroup {
-  return this.fb.group({
-    usuario:['', [Validators.required]],
-    password:['', Validators.required]
+  formularioLogin = new FormGroup({
+    usuario: new FormControl('', [Validators.required, Validators.email]),
+    pass: new FormControl('',[Validators.required])
   });
-}
 
-public submitFormulario() {
-  
-  if(this.myForm.invalid)
-  {
-    Object.values(this.myForm.controls).forEach(control=>{
-      control.markAllAsTouched();
-    });
-    return;
+  submit() {
+    if (this.formularioLogin.valid)
+      this.resultado = "Registro exitoso";
+      //alert("todos los datos son validos");
+    else
+      this.resultado = "todos los datos deben de ser requeridos";
+      //alert("los datos deben de ser obligatorios");
   }
-   console.log(this.myForm.value);
-}
 
-public get f():any{
-  return this.myForm.controls;
-}
+  ngOnInit(): void {}
+
 }
  
