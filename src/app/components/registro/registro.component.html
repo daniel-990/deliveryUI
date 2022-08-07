@@ -4,30 +4,43 @@
         <div class="divider"></div>
         <div class="row">
             <div class="col-md-4">
-                <form class="formulario-registro">
+                <div class="alert">{{resultado}}</div>
+                <form class="formulario-registro"  [formGroup]="formularioContact" (ngSubmit)="submit()">
                     <div class="mb-3">
                       <label for="nombre" class="form-label">Nombre</label>
-                      <input type="email" class="form-control" id="nombre" aria-describedby="emailHelp">
-                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                      <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" formControlName="nombre" required >
+                      <span *ngIf="this.formularioContact.get('nombre')?.errors?.['required']">
+                        
+                      </span>
                     </div>
                     <div class="mb-3">
                         <label for="correo" class="form-label">Correo</label>
-                        <input type="email" class="form-control" id="correo" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        <input type="text-center" class="form-control" id="correo" aria-describedby="emailHelp" formControlName="correo" required >
+                          <span *ngIf="this.formularioContact.get('correo')?.errors?.['email']">
+                            el formato de correo no es correcto
+                          </span>
                     </div>
                     <div class="mb-3">
                         <label for="telefono" class="form-label">Telefono</label>
-                        <input type="email" class="form-control" id="telefono" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        <input type="number" class="form-control" id="telefono" aria-describedby="emailHelp" formControlName="telefono" required>
+                        <span *ngIf="this.formularioContact.get('telefono')?.errors?.['required']">
+                            
+                            
+                          </span>
                     </div>
                     <div class="mb-3">
                         <label for="direccion" class="form-label">Direccion</label>
-                        <input type="email" class="form-control" id="direccion" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        <input type="text" class="form-control" id="direccion" aria-describedby="emailHelp"  formControlName="direccion" required>
+                        <span *ngIf="this.formularioContact.get('direccion')?.errors?.['required']">
+                            
+                          </span>
                     </div>
                     <div class="mb-3">
                       <label for="pass" class="form-label">Contraseña</label>
-                      <input type="password" class="form-control" id="pass">
+                      <input type="password" class="form-control" id="pass" formControlName="contraseña" >
+                      <span *ngIf="this.formularioContact.get('contraseña')?.errors?.['required']">
+                       
+                      </span>
                     </div>
                     <button type="submit" class="btn btn-primary btn-app">Registrar</button>
                 </form>
