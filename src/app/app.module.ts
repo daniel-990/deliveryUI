@@ -15,13 +15,13 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 
-const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'registro', component: RegistroComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'catalogo', component: CatalogoComponent},
-  {path: '**', component: Page404Component}
-]
+// const routes: Routes = [
+//   {path: '', component: HomeComponent},
+//   {path: 'registro', component: RegistroComponent},
+//   {path: 'login', component: LoginComponent},
+//   {path: 'catalogo', component: CatalogoComponent},
+//   {path: '**', component: Page404Component}
+// ]
 
 @NgModule({
   declarations: [
@@ -36,12 +36,11 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule,
-    RouterModule.forRoot(routes)
+    HttpClientModule
+    //RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

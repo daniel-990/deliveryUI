@@ -5,41 +5,48 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="alert">{{resultado}}</div>
-                <form class="formulario-registro"  [formGroup]="formularioContact" (ngSubmit)="submit()">
+                {{ frmUser.value | json }}
+                <form class="formulario-registro" [formGroup]="formularioContact" (ngSubmit)="submit(frmUser.value)" #frmUser="ngForm">
                     <div class="mb-3">
-                      <label for="nombre" class="form-label">Nombre</label>
-                      <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" formControlName="nombre" required >
-                      <span *ngIf="this.formularioContact.get('nombre')?.errors?.['required']">
-                        
+                      <label for="Nombre" class="form-label">Nombre</label>
+                      <input type="text" class="form-control" id="Nombre" aria-describedby="emailHelp" formControlName="Nombre" required >
+                      <span *ngIf="this.formularioContact.get('Nombre')?.errors?.['required']">
                       </span>
                     </div>
                     <div class="mb-3">
-                        <label for="correo" class="form-label">Correo</label>
-                        <input type="text-center" class="form-control" id="correo" aria-describedby="emailHelp" formControlName="correo" required >
-                          <span *ngIf="this.formularioContact.get('correo')?.errors?.['email']">
+                        <label for="Email" class="form-label">Email</label>
+                        <input type="text-center" class="form-control" id="Email" aria-describedby="emailHelp" formControlName="Email" required >
+                          <span *ngIf="this.formularioContact.get('Email')?.errors?.['email']">
                             el formato de correo no es correcto
                           </span>
                     </div>
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label for="telefono" class="form-label">Telefono</label>
                         <input type="number" class="form-control" id="telefono" aria-describedby="emailHelp" formControlName="telefono" required>
-                        <span *ngIf="this.formularioContact.get('telefono')?.errors?.['required']">
-                            
-                            
-                          </span>
-                    </div>
-                    <div class="mb-3">
+                        <span *ngIf="this.formularioContact.get('telefono')?.errors?.['required']"></span>
+                    </div> -->
+                    <!-- <div class="mb-3">
                         <label for="direccion" class="form-label">Direccion</label>
                         <input type="text" class="form-control" id="direccion" aria-describedby="emailHelp"  formControlName="direccion" required>
                         <span *ngIf="this.formularioContact.get('direccion')?.errors?.['required']">
-                            
-                          </span>
+                        </span>
+                    </div> -->
+                    <div class="mb-3">
+                      <label for="FechaIngreso" class="form-label">Fecha de ingreso</label>
+                      <input type="text" class="form-control" id="FechaIngreso" formControlName="FechaIngreso" >
+                      <span *ngIf="this.formularioContact.get('FechaIngreso')?.errors?.['required']">
+                      </span>
                     </div>
                     <div class="mb-3">
                       <label for="pass" class="form-label">Contraseña</label>
-                      <input type="password" class="form-control" id="pass" formControlName="contraseña" >
-                      <span *ngIf="this.formularioContact.get('contraseña')?.errors?.['required']">
-                       
+                      <input type="password" class="form-control" id="pass" formControlName="Contrasena" >
+                      <span *ngIf="this.formularioContact.get('Contrasena')?.errors?.['required']">
+                      </span>
+                    </div>
+                    <div class="mb-3">
+                      <label for="iduser" class="form-label">ClienteId</label>
+                      <input type="number" class="form-control" id="iduser" formControlName="ClienteId" >
+                      <span *ngIf="this.formularioContact.get('ClienteId')?.errors?.['required']">
                       </span>
                     </div>
                     <button type="submit" class="btn btn-primary btn-app">Registrar</button>

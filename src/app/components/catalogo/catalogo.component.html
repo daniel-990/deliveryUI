@@ -1,17 +1,17 @@
 <div class="container">
     <h1 class="catalogo">catalogo</h1>
     <div class="contenido-catalogo row">
-        <div *ngFor="let item of catalogo" class="card col" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+        <div *ngFor="let item of catalogoTodo" class="card col" style="width: 18rem;">
+            <img src="{{item.imagen}}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{item.nombreproducto}}</h5>
-                <div class="divider"></div>
+                <div class="divider2"></div>
                 <p class="card-text">
-                    <strong>Precio</strong>{{item.precio}}
+                    <strong>Precio: </strong>{{item.precio}}
                     <br>
-                    <strong>Ref restaurante</strong>{{item.idrestaurante}}
+                    <strong>Ref restaurante: </strong>{{item.idrestaurante}}
                     <br>
-                    <strong>Ref producto</strong>{{item.idproducto}}
+                    <strong>Ref producto: </strong>{{item.idproducto}}
                 </p>
                 <a href="#" class="btn btn-primary">Solicitar pedido</a>
             </div>

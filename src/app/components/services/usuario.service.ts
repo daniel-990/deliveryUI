@@ -7,7 +7,8 @@ import { Usuario } from '../models/usuario';
   providedIn: 'root'
 })
 export class UsuarioService {
- 
+  
+  user:Usuario[] = [];
 
   constructor(private httpClient: HttpClient) { }
 
@@ -15,7 +16,7 @@ export class UsuarioService {
   {
     let response = this.httpClient.get('https://localhost:7005/api/Cliente')
       .pipe(map((usuario:any) => usuario));
-    return response;
+      return response;
   }
   createUsuario(usuario:Usuario): Observable<any>{
     let response = this.httpClient.post('https://localhost:7005/api/Cliente', usuario);
