@@ -32,6 +32,7 @@ export class RegistroComponent implements OnInit {
   submit(usuario: Usuario): void{
     if (this.formularioContact.valid){
       this.resultado = "Registro exitoso";
+      
       //alert("todos los datos son validos");
     }else{
       this.resultado = "todos los datos deben de ser requeridos";

@@ -20,6 +20,6 @@ export class UsuarioService {
   }
   createUsuario(usuario:Usuario): Observable<any>{
     let response = this.httpClient.post('https://localhost:7005/api/Cliente', usuario);
-    return response;
+      return response;
   }
 }

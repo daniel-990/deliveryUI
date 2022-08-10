@@ -7,3 +7,12 @@
     padding-top: 32px;
     padding-bottom: 50px;
 }
+.banner-prpal-catalogo{
+    background-image: url(/assets/imagen/delivery.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px;
+    background-attachment: fixed;
+    margin-bottom: 3rem;
+}
